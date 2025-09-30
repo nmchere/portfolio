@@ -31,6 +31,35 @@ body {
 .hero p {
   font-size: 1.2rem;
 }
+.about-flex {
+  display: flex;
+  align-items: center;   /* vertically center */
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  flex: 1; 
+  min-width: 220px;
+  text-align: center;
+}
+
+.about-img img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  flex: 3; 
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* text vertically aligned */
+}
 
 .about-img img {
   width: 220px;            /* medium size */
@@ -81,6 +110,21 @@ body {
   background: var(--blue);
   color: var(--text-light);
 }
+.section-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+/* Dark/Blue section cards */
+.section.blue .section-card {
+  background: #1e40af;
+  border: 1px solid #1d4ed8;
+  color: #ffffff;
+}
 
 .container {
   max-width: 1000px;
@@ -95,6 +139,48 @@ h2 {
 }
 .section.blue h2 {
   color: var(--text-light);
+}
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.spotlight.section-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.spotlight.section-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.badge {
+  background: #ffffff;
+  color: #2563eb;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.section.blue .badge {
+  background: #ffffff;
+  color: #1e40af;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
 /* Buttons */
