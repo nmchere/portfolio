@@ -1,64 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name - Professional Profile</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Naga Manoj Makkena - Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-<header class="page-header">
-  <h1>Naga Manoj Makkena</h1>
-  <p>ETL Developer | Software Engineer | Data-Driven Solutions</p>
-  <button id="theme-toggle" class="theme-toggle">Toggle Dark Mode</button>
-</header>
-<main class="container">
-<section id="bio">
-<h2>About Me</h2>
-<p>As an ETL developer at T-Mobile with a passion for software engineering and data pipelines, I orchestrate API-driven integrations that power partner connections and internal systems. My work has led to faster feature delivery, improved data retrieval performance, reduced infrastructure costs, and near-perfect service uptime. I'm continuously exploring system design, AI, and machine learning to expand my technical horizon.</p>
-</section>
-<section id="skills">
-<h2>Skills</h2>
-<ul class="skills-grid">
-<li>Java 17 &amp; Spring Boot</li>
-<li>AWS</li>
-<li>Kafka</li>
-<li>PostgreSQL</li>
-<li>Redis</li>
-<li>API orchestration</li>
-<li>ETL pipelines</li>
-<li>Debugging</li>
-<li>CI/CD</li>
-<li>API latency troubleshooting</li>
-</ul>
-</section>
-<section id="experience">
-<h2>Experience</h2>
-<ul class="experience-list">
-<li><strong>T-Mobile – ETL Developer:</strong> Delivered features 30% faster and improved data retrieval speed by 45% through optimized ETL pipelines and API orchestration. Reduced infrastructure costs by 20%, maintained 99.9% service uptime, and executed zero‑downtime hotfix deployments.</li>
-<li><strong>Arizona State University – Teaching Assistant:</strong> Supported the SWE 331 course (Engineering Secure Software Systems) by leading recitations, mentoring students on distributed system security, and contributing to curriculum development.</li>
-<li><strong>Startup Peel – Software Engineer:</strong> Built ETL pipelines and integrated microservices, streamlining data flows and enabling rapid product development.</li>
-<li><strong>Prosentech – Backend Developer Intern:</strong> Implemented Java &amp; Spring Boot microservices and optimized database queries for efficient data retrieval.</li>
-</ul>
-</section>
-<section id="education">
-<h2>Education &amp; Certifications</h2>
-<ul>
-<li><strong>Master of Science in Computer Science</strong> – Arizona State University (Dec 2023)</li>
-<li>AWS Certified</li>
-<li>Salesforce Platform Developer 1</li>
-</ul>
-</section>
-<section id="contact">
-<h2>Contact</h2>
-<ul>
-<li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
-<li>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
-<li>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">linkedin.com/in/yourusername</a></li>
-<li>Portfolio: <a href="https://yourportfolio.com" target="_blank" rel="noopener">yourportfolio.com</a></li>
-</ul>
-</section>
-</main>
-<script src="script.js"></script>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Naga Manoj Makkena</h1>
+      <p>ETL Developer | Software Engineer | Data-Driven Solutions</p>
+      <div class="cta-buttons">
+        <a href="resume.pdf" class="btn">Download Resume</a>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+      <button id="theme-toggle" class="theme-toggle">Toggle Theme</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about" class="section light">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I am an ETL Developer at T-Mobile specializing in API-driven data pipelines 
+          and orchestration. My work improves feature delivery, system reliability, 
+          and performance across large-scale integrations. I focus on building 
+          efficient, scalable, and secure systems while continuously expanding into 
+          system design and AI/ML.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section gray">
+      <div class="container">
+        <h2>Projects</h2>
+        
+        <!-- Spotlight Projects -->
+        <div class="project-spotlight">
+          <div class="spotlight">
+            <div class="spotlight-text">
+              <h3>API Orchestration Platform</h3>
+              <p>Built an internal orchestration platform connecting partner APIs 
+              and standardizing data exchange across teams, improving delivery 
+              by 30%.</p>
+              <a href="#" class="btn small">View Project</a>
+            </div>
+          </div>
+          <div class="spotlight">
+            <div class="spotlight-text">
+              <h3>Data Pipeline Optimizer</h3>
+              <p>Developed a system to dynamically adjust ETL pipeline 
+              configurations based on real-time metrics, reducing costs by 20%.</p>
+              <a href="#" class="btn small">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid Projects -->
+        <div class="project-grid">
+          <div class="card">
+            <h4>Microservice Suite</h4>
+            <p>Java & Spring Boot services for secure partner integrations.</p>
+          </div>
+          <div class="card">
+            <h4>ETL Monitoring Tool</h4>
+            <p>Monitoring dashboards for pipeline performance.</p>
+          </div>
+          <div class="card">
+            <h4>Secure API Gateway</h4>
+            <p>OAuth2-enabled gateway for external partner connectivity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="section blue">
+      <div class="container">
+        <h2>Achievements</h2>
+        <div class="badge-grid">
+          <span class="badge">30% Faster Delivery</span>
+          <span class="badge">45% Faster Data Retrieval</span>
+          <span class="badge">20% Cost Reduction</span>
+          <span class="badge">99.9% Uptime</span>
+          <span class="badge">Zero-Downtime Hotfix</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section light">
+      <div class="container">
+        <h2>Contact Me</h2>
+        
+        <!-- Contact Form -->
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required/>
+          <input type="email" placeholder="Your Email" required/>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <!-- Contact Links -->
+        <ul class="contact-links">
+          <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
+          <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+          <li>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></li>
+          <li>Resume: <a href="resume.pdf" target="_blank">Download PDF</a></li>
+          <li>Portfolio: <a href="https://yourportfolio.com" target="_blank">yourportfolio.com</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
