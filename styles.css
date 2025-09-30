@@ -1,39 +1,46 @@
-/* Shared Theme with Light and Dark Mode */
-/* CSS Variables */
+/* --------------------------
+   Global Theme (Light/Dark)
+--------------------------- */
 :root {
   --bg-color: #ffffff;
-  --text-color: #1a1a1a;
-  --accent-color: #007acc; /* blue/teal */
-  --secondary-bg: #f5f5f5;
-  --card-bg: #fefefe;
-  --border-radius: 8px;
+  --text-color: #222222;
+  --accent-color: #2563eb;   /* blue accent */
+  --muted-color: #6b7280;    /* gray for secondary text */
+  --card-bg: #f9fafb;
+  --border-radius: 12px;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 body.dark {
-  --bg-color: #121212;
-  --text-color: #f5f5f5;
-  --accent-color: #009688; /* same accent for dark mode */
-  --secondary-bg: #1e1e1e;
-  --card-bg: #1f1f1f;
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --accent-color: #38bdf8;   /* cyan accent */
+  --muted-color: #94a3b8;
+  --card-bg: #1e293b;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', 'Roboto', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 16px;
 }
 
-/* Header and Hero */
+/* --------------------------
+   Header / Hero
+--------------------------- */
 .page-header,
 .hero {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
-  padding: 2rem 1rem;
+  background: linear-gradient(135deg, var(--accent-color), #3b82f6);
+  color: white;
+  padding: 3rem 1rem;
   text-align: center;
-  position: relative;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 .hero-content {
@@ -46,173 +53,170 @@ html, body {
   top: 1rem;
   right: 1rem;
   padding: 0.5rem 1rem;
-  background: var(--bg-color);
+  background: white;
   color: var(--accent-color);
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+body.dark .theme-toggle {
+  background: var(--card-bg);
+  color: var(--text-color);
 }
 
 .theme-toggle:hover {
-  opacity: 0.9;
+  background: var(--accent-color);
+  color: white;
 }
 
+/* --------------------------
+   Layout
+--------------------------- */
 .container {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
-/* Sections */
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 h1, h2, h3 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 h2 {
-  border-bottom: 2px solid var(--accent-color);
-  display: inline-block;
-  padding-bottom: 0.25rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
 }
 
+p {
+  margin-bottom: 1rem;
+  color: var(--muted-color);
+}
+
+/* --------------------------
+   Skills
+--------------------------- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .skills-grid li {
-  background-color: var(--secondary-bg);
-  padding: 0.5rem;
+  background: var(--card-bg);
+  padding: 0.75rem;
   border-radius: var(--border-radius);
   text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
 }
 
-.experience-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.skills-grid li:hover {
+  transform: translateY(-4px);
 }
 
-.experience-list li {
-  margin-bottom: 0.8rem;
-}
-
-.experience-list strong {
-  color: var(--accent-color);
-}
-
-.skill-groups {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.skill-group h3 {
-  margin-bottom: 0.5rem;
-  color: var(--accent-color);
-}
-
-.skill-group ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.skill-group li {
-  margin-bottom: 0.4rem;
-}
-
-/* Timeline */
+/* --------------------------
+   Experience / Timeline
+--------------------------- */
 .timeline {
-  position: relative;
+  border-left: 3px solid var(--accent-color);
   margin-left: 1rem;
-  padding-left: 1rem;
-  border-left: 2px solid var(--accent-color);
+  padding-left: 1.5rem;
 }
 
 .timeline-item {
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
+  margin-bottom: 2rem;
   position: relative;
 }
 
 .timeline-item:before {
   content: '';
   position: absolute;
-  left: -1.3rem;
-  top: 0.5rem;
+  left: -1.1rem;
+  top: 0.3rem;
   width: 0.8rem;
   height: 0.8rem;
   background-color: var(--accent-color);
   border-radius: 50%;
 }
 
-/* Cards / Achievements */
+/* --------------------------
+   Cards / Achievements
+--------------------------- */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
 
 .card {
-  background-color: var(--secondary-bg);
-  padding: 1rem;
+  background: var(--card-bg);
+  padding: 1.5rem;
   border-radius: var(--border-radius);
   text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .card .badge {
+  display: inline-block;
+  margin-top: 0.5rem;
   font-weight: bold;
   color: var(--accent-color);
 }
 
-/* Contact */
-#contact ul,
-#contact-expanded ul {
+/* --------------------------
+   Contact
+--------------------------- */
+#contact ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
-#contact li,
-#contact-expanded li {
-  margin-bottom: 0.5rem;
+#contact li {
+  margin-bottom: 0.75rem;
 }
 
-#contact a,
-#contact-expanded a {
+#contact a {
   color: var(--accent-color);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-#contact a:hover,
-#contact-expanded a:hover {
+#contact a:hover {
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
-/* Media Queries */
+/* --------------------------
+   Responsive
+--------------------------- */
 @media (max-width: 600px) {
-  .timeline {
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
+  .theme-toggle {
+    position: static;
+    margin-top: 1rem;
   }
-  .timeline-item {
+  .timeline {
+    border: none;
+    margin-left: 0;
     padding-left: 0;
   }
   .timeline-item:before {
     display: none;
-  }
-  .theme-toggle {
-    position: static;
-    margin-top: 1rem;
   }
 }
