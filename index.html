@@ -28,22 +28,25 @@
   <main>
     <!-- About -->
     <section id="about" class="section light">
-      <div class="container about-flex">
-        <div class="about-img">
-          <img src="manoj.jpg" alt="Naga Manoj Makkena">
-        </div>
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>
-            I am an ETL Developer at T-Mobile specializing in API-driven data pipelines
-            and orchestration. My work improves feature delivery, system reliability,
-            and performance across large-scale integrations. I focus on building
-            efficient, scalable, and secure systems while continuously expanding into
-            system design and AI/ML.
-          </p>
+      <div class="container">
+        <div class="about-flex section-card">
+          <div class="about-img">
+            <img src="manoj.jpg" alt="Naga Manoj Makkena">
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              I am an ETL Developer at T-Mobile specializing in API-driven data pipelines
+              and orchestration. My work improves feature delivery, system reliability,
+              and performance across large-scale integrations. I focus on building
+              efficient, scalable, and secure systems while continuously expanding into
+              system design and AI/ML.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
 
 
     <!-- Projects -->
@@ -52,37 +55,32 @@
         <h2>Projects</h2>
 
         <!-- Spotlight Projects -->
-        <div class="project-spotlight">
-          <div class="spotlight">
-            <div class="spotlight-text">
-              <h3>API Orchestration Platform</h3>
-              <p>Built an internal orchestration platform connecting partner APIs
-                and standardizing data exchange across teams, improving delivery
-                by 30%.</p>
-              <a href="#" class="btn small">View Project</a>
-            </div>
-          </div>
-          <div class="spotlight">
-            <div class="spotlight-text">
-              <h3>Data Pipeline Optimizer</h3>
-              <p>Developed a system to dynamically adjust ETL pipeline
-                configurations based on real-time metrics, reducing costs by 20%.</p>
-              <a href="#" class="btn small">View Project</a>
-            </div>
-          </div>
+        <div class="spotlight section-card">
+          <h3>API Orchestration Platform</h3>
+          <p>Built an internal orchestration platform connecting partner APIs
+            and standardizing data exchange across teams, improving delivery
+            by 30%.</p>
+          <a href="#" class="btn small">View Project</a>
+        </div>
+
+        <div class="spotlight section-card">
+          <h3>Data Pipeline Optimizer</h3>
+          <p>Developed a system to dynamically adjust ETL pipeline
+            configurations based on real-time metrics, reducing costs by 20%.</p>
+          <a href="#" class="btn small">View Project</a>
         </div>
 
         <!-- Grid Projects -->
         <div class="project-grid">
-          <div class="card">
+          <div class="card section-card">
             <h4>Microservice Suite</h4>
             <p>Java & Spring Boot services for secure partner integrations.</p>
           </div>
-          <div class="card">
+          <div class="card section-card">
             <h4>ETL Monitoring Tool</h4>
             <p>Monitoring dashboards for pipeline performance.</p>
           </div>
-          <div class="card">
+          <div class="card section-card">
             <h4>Secure API Gateway</h4>
             <p>OAuth2-enabled gateway for external partner connectivity.</p>
           </div>
@@ -90,11 +88,14 @@
       </div>
     </section>
 
+
+
+
     <!-- Achievements -->
     <section id="achievements" class="section blue">
       <div class="container">
         <h2>Achievements</h2>
-        <div class="badge-grid">
+        <div class="badge-grid section-card">
           <span class="badge">30% Faster Delivery</span>
           <span class="badge">45% Faster Data Retrieval</span>
           <span class="badge">20% Cost Reduction</span>
@@ -104,30 +105,31 @@
       </div>
     </section>
 
+
     <!-- Contact -->
     <section id="contact" class="section light">
       <div class="container">
         <h2>Contact Me</h2>
-
-        <!-- Contact Form -->
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-
-        <!-- Contact Links -->
-        <ul class="contact-links">
-          <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
-          <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a>
-          </li>
-          <li>Resume: <a href="resume.pdf" target="_blank">Download PDF</a></li>
-          <li>Portfolio: <a href="https://yourportfolio.com" target="_blank">yourportfolio.com</a></li>
-        </ul>
+        <div class="section-card">
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+          <ul class="contact-links">
+            <li>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></li>
+            <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/yourusername"
+                target="_blank">linkedin.com/in/yourusername</a></li>
+            <li>Resume: <a href="resume.pdf" target="_blank">View Resume</a> |
+              <a href="resume.pdf" download="Naga_Manoj_Makkena_Resume.pdf">Download PDF</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
+
   </main>
 
   <script src="script.js"></script>
